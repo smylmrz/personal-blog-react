@@ -6,7 +6,7 @@ function Navigation() {
         <div className="justify-between flex">
             <div className="flex items-center gap-5">
                 <div className="text-xl font-bold text-neutral-900">
-                    <img className="border-2 border-black w-20" src="/img_3.png" alt=""/>
+                    <img className="border-2 border-black w-20" src="/logo.png" alt=""/>
                 </div>
                 <ul className="flex gap-5">
                     <li>
