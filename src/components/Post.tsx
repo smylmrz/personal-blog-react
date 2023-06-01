@@ -8,7 +8,7 @@ interface Props {
 function Post({ post }: Props) {
     return (
         <Link className="group block" to={post.slug}>
-            <h2 className="mb-1 group-hover:text-amber-400 duration-200 text-xl font-bold">
+            <h2 className="mb-1 group-hover:text-blue-400 duration-200 text-xl font-bold">
                 {post.title}
             </h2>
             <h4 className="mb-3 text-lg font-medium text-neutral-600">{post.subtitle}</h4>

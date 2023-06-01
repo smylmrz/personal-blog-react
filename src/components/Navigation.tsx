@@ -37,7 +37,7 @@ function Navigation() {
                 </ul>
             </div>
             <div>
-                <button className="p-2 rounded-lg duration-200 bg-amber-100 hover:bg-amber-200 flex items-center justify-center">
+                <button className="p-2 rounded-lg duration-200 bg-blue-100 hover:bg-blue-200 flex items-center justify-center">
                     <Moon />
                 </button>
             </div>
