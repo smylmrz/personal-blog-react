@@ -2,7 +2,7 @@ import Navigation from "./Navigation.tsx";
 
 function Header() {
     return (
-        <header className="pt-12 bg-amber-50">
+        <header className="pt-12 bg-blue-50">
             <div className="space-y-20 container mx-auto">
                 <Navigation />
 
