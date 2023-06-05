@@ -2,10 +2,15 @@ import { useParams } from "react-router-dom";
 import { posts } from "../data/posts.ts";
 import { Post as PostType } from "../types/Post.ts";
 import { Title } from "../components/Title.tsx";
+import { useEffect } from "react";
 
 function Post(){
     const { slug } = useParams();
     const post: PostType | undefined = posts.find((post) => post.slug === slug);
+
+    useEffect(() => {
+        document.title = post?.title as string;
+    });
 
     const headings = [
         'Introduction',
