@@ -34,7 +34,7 @@ function Navigation() {
             <div className="flex items-center gap-5">
                 <div>
                     <Link to="/">
-                        <img className="border-2 border-black w-20" src="/logo.png" alt=""/>
+                        <img className="border-2 border-black w-20" src="/logo.svg" alt=""/>
                     </Link>
                 </div>
                 <ul className="hidden lg:flex gap-5">

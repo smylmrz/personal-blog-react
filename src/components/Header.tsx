@@ -7,7 +7,7 @@ function Header() {
                 <Navigation />
 
                 <div className="hidden lg:flex">
-                    <img className="-mb-3 w-40" src="/hero-avatar.png" alt=""/>
+                    <img className="-mb-7 w-40" src="/hero-avatar.png" alt=""/>
                     <h2 className="mt-5 text-lg font-medium leading-6">
                         Learning is a daily thing, wisdom an endless pursuit. <br/>
                         You never arrive, you never fill up, you never graduate.

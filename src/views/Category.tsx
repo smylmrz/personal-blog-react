@@ -12,15 +12,15 @@ function Category(){
     const categoryPosts: PostType[] = posts.filter(post => post.category_id === category?.id)
 
     return (
-        <div className="container mx-auto space-y-6 py-20">
+        <div className="container px-5 lg:px-0 mx-auto space-y-6 py-20">
             <div className="text-4xl font-bold text-blue-500">
                 {category?.name}
             </div>
 
-            <div className="grid grid-cols-12 gap-10">
+            <div className="grid grid-cols-12 gap-y-10 lg:gap-x-10">
                 {categoryPosts.map(post => {
                     return (
-                        <div className="col-span-6">
+                        <div className="col-span-12 lg:col-span-6">
                             <Post key={post.id} post={post} />
                         </div>
                     )
