@@ -23,7 +23,12 @@ function Navigation() {
         },
         {
             name: "Topics",
+            slug: "topics",
             links: categories
+        },
+        {
+            name: "Goodies",
+            slug: "goodies"
         }
     ]
 
@@ -31,7 +36,7 @@ function Navigation() {
 
     return (
         <div className="px-5 lg:px-0 flex items-center justify-between">
-            <div className="flex items-center gap-5">
+            <div className="flex items-center space-x-10">
                 <div>
                     <Link to="/">
                         <img className="border-2 border-black w-20" src="/logo.svg" alt=""/>
@@ -39,7 +44,7 @@ function Navigation() {
                 </div>
                 <ul className="hidden lg:flex gap-5">
                     {links.map(link => (
-                        <li key={link.name}>
+                        <li key={link.slug}>
                             <NavLink to={link.slug ?? "/"}>
                                 {link.name}
                             </NavLink>
@@ -75,7 +80,7 @@ function Navigation() {
                                 {link.name}
                             </NavLink>
                             {link.links?.length && <ul className="space-y-2 pt-2 pl-5">
-                                {link.links?.map(link => <li key={link.name}>
+                                {link.links?.map(link => <li key={link.slug}>
                                         <NavLink className="font-medium text-xl" to={link.slug ?? '/'}>
                                             {link.name}
                                         </NavLink>

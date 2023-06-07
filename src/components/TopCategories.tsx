@@ -7,7 +7,7 @@ function TopCategories() {
             <Title>Top Categories</Title>
             <div className="flex gap-2 flex-wrap">
                 {categories.map((category) =>
-                    <Tag content={category.name} to={`category/${category.slug}`} key={category.id}/>)
+                    <Tag content={category.name} to={`category/${category.slug}`} key={category.slug}/>)
                 }
             </div>
         </div>
