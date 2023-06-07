@@ -6,12 +6,12 @@ import Newsletter from "../components/Newsletter.tsx";
 function Home () {
 
     return (
-        <div className="container space-y-20 py-40 mx-auto">
-            <div className="grid grid-cols-12 align-items-start gap-20">
-                <div className="col-span-8">
+        <div className="container space-y-20 px-5 lg:px-0 py-10 lg:py-40 mx-auto">
+            <div className="flex flex-col lg:grid grid-cols-12 align-items-start gap-10 lg:gap-20">
+                <div className="lg:col-span-8">
                     <RecentPosts />
                 </div>
-                <div className="sticky top-10 h-fit col-span-4 space-y-20">
+                <div className="lg:col-span-4 lg:sticky top-10 h-fit space-y-20">
                     <TopCategories/>
                     <PopularContent/>
                 </div>

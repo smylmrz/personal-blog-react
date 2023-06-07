@@ -9,7 +9,7 @@ function RecentPosts() {
             <Title>Recently Published</Title>
 
             <div className="space-y-16">
-                {posts.map((post) => <Post post={post} key={post.id}/>)}
+                {posts.map((post) => <Post post={post} key={post.slug}/>)}
             </div>
         </div>
     )

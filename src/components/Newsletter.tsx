@@ -1,7 +1,7 @@
 function Newsletter() {
     return (
-        <div className="grid grid-cols-12 gap-20">
-            <div className="col-span-8 space-y-10">
+        <div className="flex lg:grid lg:grid-cols-12 gap-20">
+            <div className="lg:col-span-8 space-y-10">
                 <div className="space-y-5">
                     <h2 className="font-bold text-2xl text-blue-400">
                         You haven't subscribed yet?!
@@ -15,21 +15,22 @@ function Newsletter() {
                     </h3>
                 </div>
 
-                <form action="" className="flex gap-3">
+                <form action="" className="flex flex-col lg:flex-row gap-3">
                     <div className="space-y-2">
                         <div>Your name</div>
-                        <input type="text" className="outline-none focus:border-blue-400 duration-200 border-2 py-1.5 px-3 rounded-lg"/>
+                        <input type="text" className="w-full outline-none focus:border-blue-400 duration-200 border-2 py-1.5 px-3 rounded-lg"/>
                     </div>
                     <div className="space-y-2">
                         <div>Your email</div>
-                        <input type="email" className="outline-none focus:border-blue-400 duration-200 border-2 py-1.5 px-3 rounded-lg"/>
+                        <input type="email" className="w-full outline-none focus:border-blue-400 duration-200 border-2 py-1.5 px-3 rounded-lg"/>
                     </div>
-                    <button className="px-4 duration-200 py-1 font-medium hover:bg-blue-400 bg-blue-300 rounded-lg">
+                    <button className="px-4 duration-200 py-3 lg:py-1 font-medium hover:bg-blue-400 bg-blue-300 rounded-lg">
                         Join the club
                     </button>
                 </form>
             </div>
-            <div className="col-span-4">
+
+            <div className="hidden lg:block col-span-4">
                 <img className="rotate-0" src="/newsletter-avatar.png" alt=""/>
             </div>
         </div>

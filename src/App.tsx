@@ -18,7 +18,7 @@ const router = createBrowserRouter(
                 <Route path="about" element={<About />} />
                 <Route path=":slug" element={<Post />} />
                 <Route path="category/:slug" element={<Category />}/>
-            </Route>=
+            </Route>
         </>
     )
 );
