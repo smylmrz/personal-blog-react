@@ -3,6 +3,7 @@ import { posts } from "../data/posts.ts";
 import { Post as PostType } from "../types/Post.ts";
 import { Title } from "../components/Title.tsx";
 import { useEffect } from "react";
+import Markdown from "../components/Markdown.tsx";
 
 function Post(){
     const { slug } = useParams();
@@ -35,8 +36,7 @@ function Post(){
                 <div className="grid grid-cols-12 align-items-start gap-10">
                     <div className="col-span-9">
                         <div className="space-y-8">
-
-                            <p className="text-lg leading-relaxed">{post?.content}</p>
+                            <Markdown className="text-lg leading-relaxed" source={post?.content} />
                         </div>
                     </div>
                     <div className="sticky top-10 h-fit col-span-3">
