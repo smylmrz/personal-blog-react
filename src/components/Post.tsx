@@ -12,7 +12,7 @@ function Post({ post }: Props) {
                 {post.title}
             </h2>
             <h4 className="mb-3 text-lg font-medium text-neutral-600">{post.subtitle}</h4>
-            <p className="max-w-fit mb-4 leading-relaxed">{post.content}</p>
+            <p className="max-w-fit mb-4 leading-relaxed">{post.excerpt}</p>
             <div className="font-bold">Read more</div>
         </Link>
     )

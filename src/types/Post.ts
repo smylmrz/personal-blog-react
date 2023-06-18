@@ -1,8 +1,9 @@
 export interface Post {
-    id: number
+    id: string
     title: string
-    category_id: number
     slug: string
+    category_id: number
     subtitle?: string
+    excerpt: string
     content: string
 }

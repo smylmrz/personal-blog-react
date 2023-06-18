@@ -1,17 +1,36 @@
 import { useParams } from "react-router-dom";
-import { posts } from "../data/posts.ts";
 import { Post as PostType } from "../types/Post.ts";
 import { Title } from "../components/Title.tsx";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Markdown from "../components/Markdown.tsx";
+import { supabase } from "../supabaseClient.ts";
 
 function Post(){
     const { slug } = useParams();
-    const post: PostType | undefined = posts.find((post) => post.slug === slug);
+
+    const [post, setPost] = useState<PostType | null>(null)
 
     useEffect(() => {
         document.title = post?.title as string;
-    });
+
+        const getPost = async () => {
+            const { data: post, error } = await supabase.from("posts")
+                .select("*")
+                .eq("slug", slug)
+
+            if (error){
+                console.warn(error)
+                return
+            }
+
+            console.log(post)
+            if (post){
+                setPost(post as any)
+            }
+        }
+
+        getPost()
+    }, []);
 
     const headings = [
         'Introduction',
@@ -45,7 +64,7 @@ function Post(){
                                 Table of Contents
                             </Title>
                             <ul className="space-y-4">
-                                {headings.map(heading => <li>
+                                {headings.map(heading => <li key={heading}>
                                     <a className="opacity-80 hover:opacity-100 duration-200" href="">{heading}</a>
                                 </li>)}
                             </ul>
